@@ -1,0 +1,42 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+
+  return posts.map(post => ({
+    params: { uuid: post.data.uuid },
+    props: { post },
+  }));
+}
+
+export type Props = {
+  post: CollectionEntry<'posts'>;
+};
+
+const { post } = Astro.props;
+
+/**
+ * Redirects to the post page.
+ * 
+ * Refer to: Pass frontmatter variables to scripts,
+ * https://docs.astro.build/en/guides/client-side-scripts/#pass-frontmatter-variables-to-scripts
+ */
+---
+
+<resolve-slug data-slug={post.slug}>
+  <p>Redirecting to...</p>
+</resolve-slug>
+
+<script>
+  class ResolveSlug extends HTMLElement {
+    constructor() {
+      super();
+
+      const slug = this.dataset.slug;
+      window.location.replace(`/posts/${slug}`);
+    }
+  }
+
+  customElements.define('resolve-slug', ResolveSlug);
+</script>
