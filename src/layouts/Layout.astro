@@ -1,0 +1,46 @@
+---
+import Header from './Header.astro';
+import SEOTags from '@/components/seo/SEOTags.astro';
+import type { HeadTags } from '@/utils/types/HeadTags';
+
+import '@fontsource/open-sans';
+import '@/styles/index.css';
+
+export type Props = HeadTags;
+
+const headTags = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <SEOTags {...headTags} />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400&family=Inter&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css"
+    integrity="sha512-6c4nX2tn5KbzeBJo9Ywpa0Gkt+mzCzJBrE1RB6fmpcsoN+b/w/euwIMuQKNyUoU/nToKN3a8SgNOtPrbW12fug=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- TODO: React: <Meta pageTitle={pageTitle} /> -->
+  
+
+  <body class="bg-white dark:bg-gray-800">
+    <Header />
+    <!-- <BlurCircle position="top" color={theme.colors.blur.top} />
+    <BlurCircle position="bottom" color={theme.colors.blur.bottom} /> -->
+    <slot />
+    <style is:global>
+      html {
+        font-family: 'Open Sans';
+      }
+    </style>
+  </body>
+</html>

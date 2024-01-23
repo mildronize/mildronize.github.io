@@ -1,0 +1,302 @@
+
+/** https://github.com/SaraVieira/prism-theme-night-owl/blob/master/light-no-italics.css **/
+html.light code[class*='language-'],
+html code[class*='language-'],
+html.light pre[class*='language-'],
+html pre[class*='language-'] {
+  color: #403f53;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  font-size: 0.8rem;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+html.light pre[class*='language-']::-moz-selection,
+html pre[class*='language-']::-moz-selection,
+html.light pre[class*='language-'] ::-moz-selection,
+html pre[class*='language-'] ::-moz-selection,
+html.light code[class*='language-']::-moz-selection,
+html code[class*='language-']::-moz-selection,
+html.light code[class*='language-'] ::-moz-selection,
+html code[class*='language-'] ::-moz-selection {
+  text-shadow: none;
+  background: #e0e0e0;
+}
+html.light pre[class*='language-']::selection,
+html pre[class*='language-']::selection,
+html.light pre[class*='language-'] ::selection,
+html pre[class*='language-'] ::selection,
+html.light code[class*='language-']::selection,
+html code[class*='language-']::selection,
+html.light code[class*='language-'] ::selection,
+html code[class*='language-'] ::selection {
+  text-shadow: none;
+  background: #e0e0e0;
+}
+@media print {
+  html.light code[class*='language-'],
+  html code[class*='language-'],
+  html.light pre[class*='language-'],
+  html pre[class*='language-'] {
+    text-shadow: none;
+  }
+}
+html.light pre[class*='language-'],
+html pre[class*='language-'] {
+  padding: 2em;
+  margin: 0.5em 0;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+}
+html.light :not(pre) > code[class*='language-'],
+html :not(pre) > code[class*='language-'],
+html.light pre[class*='language-'],
+html pre[class*='language-'] {
+  color: white;
+  background: #fbfbfb;
+  /* border: 1px solid #ddd; */
+}
+html.light :not(pre) > code[class*='language-'],
+html :not(pre) > code[class*='language-'] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+  /* border: 1px solid #ddd; */
+}
+html.light .token.comment,
+html .token.comment,
+html.light .token.prolog,
+html .token.prolog,
+html.light .token.cdata,
+html .token.cdata {
+  color: #989fb1;
+}
+html.light .token.punctuation,
+html .token.punctuation {
+  color: #994cc3;
+}
+html.light .namespace,
+html .namespace {
+  color: #0c969b;
+}
+html.light .token.deleted,
+html .token.deleted {
+  color: rgba(239, 83, 80, 0.56);
+}
+html.light .token.symbol,
+html .token.symbol,
+html.light .token.operator,
+html .token.operator,
+html.light .token.keyword,
+html .token.keyword,
+html.light .token.property,
+html .token.property {
+  color: #0c969b;
+}
+html.light .token.tag,
+html .token.tag {
+  color: #994cc3;
+}
+html.light .token.boolean,
+html .token.boolean {
+  color: #bc5454;
+}
+html.light .token.number,
+html .token.number {
+  color: #aa0982;
+}
+html.light .token.constant,
+html .token.constant,
+html.light .token.builtin,
+html .token.builtin,
+html.light .token.string,
+html .token.string,
+html.light .token.url,
+html .token.url,
+html.light .token.entity,
+html .token.entity,
+html.light .language-css .token.string,
+html .language-css .token.string,
+html.light .style .token.string,
+html .style .token.string,
+html.light .token.char,
+html .token.char {
+  color: #4876d6;
+}
+html.light .token.selector,
+html .token.selector,
+html.light .token.function,
+html .token.function,
+html.light .token.doctype,
+html .token.doctype {
+  color: #994cc3;
+}
+html.light .token.attr-name,
+html .token.attr-name,
+html.light .token.inserted,
+html .token.inserted {
+  color: #4876d6;
+}
+html.light .token.class-name,
+html .token.class-name,
+html.light .token.atrule,
+html .token.atrule,
+html.light .token.attr-value,
+html .token.attr-value {
+  color: #111;
+}
+html.light .token.regex,
+html .token.regex,
+html.light .token.important,
+html .token.important,
+html.light .token.variable,
+html .token.variable {
+  color: #c96765;
+}
+html.light .token.important,
+html .token.important,
+html.light .token.bold,
+html .token.bold {
+  font-weight: bold;
+}
+
+/** https://github.com/PrismJS/prism-themes/blob/master/themes/prism-night-owl.css **/ 
+/** * MIT License * Copyright (c) 2018 Sarah Drasner * Sarah Drasner's[@sdras] Night Owl * Ported by Sara vieria [@SaraVieira] * Added by Souvik Mandal [@SimpleIndian] */
+
+html.dark code[class*='language-'],
+html.dark pre[class*='language-'] {
+  color: #d6deeb;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  /* font-size: 1em; */
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+html.dark pre[class*='language-']::-moz-selection,
+html.dark pre[class*='language-'] ::-moz-selection,
+html.dark code[class*='language-']::-moz-selection,
+html.dark code[class*='language-'] ::-moz-selection {
+  text-shadow: none;
+  background: rgba(29, 59, 83, 0.99);
+}
+html.dark pre[class*='language-']::selection,
+html.dark pre[class*='language-'] ::selection,
+html.dark code[class*='language-']::selection,
+html.dark code[class*='language-'] ::selection {
+  text-shadow: none;
+  background: rgba(29, 59, 83, 0.99);
+}
+@media print {
+  html.dark code[class*='language-'],
+  html.dark pre[class*='language-'] {
+    text-shadow: none;
+  }
+}
+html.dark pre[class*='language-'] {
+  /* padding: 2em; */
+  margin: 0.5em 0;
+  overflow: auto;
+}
+html.dark :not(pre) > code[class*='language-'],
+html.dark pre[class*='language-'] {
+  color: white;
+  background: #011627;
+  /* border: 1px solid #001e36; */
+}
+html.dark :not(pre) > code[class*='language-'] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+  /* border: 1px solid #001e36; */
+}
+html.dark .token.comment,
+html.dark .token.prolog,
+html.dark .token.cdata {
+  color: #637777;
+  font-style: italic;
+}
+html.dark .token.punctuation {
+  color: #c792ea;
+}
+html.dark .namespace {
+  color: #b2ccd6;
+}
+html.dark .token.deleted {
+  color: rgba(239, 83, 80, 0.56);
+  font-style: italic;
+}
+html.dark .token.symbol,
+html.dark .token.property {
+  color: #80cbc4;
+}
+html.dark .token.tag,
+html.dark .token.operator,
+html.dark .token.keyword {
+  color: #7fdbca;
+}
+html.dark .token.boolean {
+  color: #ff5874;
+}
+html.dark .token.number {
+  color: #f78c6c;
+}
+html.dark .token.constant,
+html.dark .token.function,
+html.dark .token.builtin,
+html.dark .token.char {
+  color: #82aaff;
+}
+html.dark .token.selector,
+html.dark .token.doctype {
+  color: #c792ea;
+  font-style: italic;
+}
+html.dark .token.attr-name,
+html.dark .token.inserted {
+  color: #addb67;
+  font-style: italic;
+}
+html.dark .token.string,
+html.dark .token.url,
+html.dark .token.entity,
+html.dark .language-css .token.string,
+html.dark .style .token.string {
+  color: #addb67;
+}
+html.dark .token.class-name,
+html.dark .token.atrule,
+html.dark .token.attr-value {
+  color: #ffcb8b;
+}
+html.dark .token.regex,
+html.dark .token.important,
+html.dark .token.variable {
+  color: #d6deeb;
+}
+html.dark .token.important,
+html.dark .token.bold {
+  font-weight: bold;
+}
+html.dark .token.italic {
+  font-style: italic;
+}

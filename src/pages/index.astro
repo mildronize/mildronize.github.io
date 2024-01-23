@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import Container from '@/layouts/Container.astro';
+import PostListByYear from '@/components/PostListByYear.astro';
+import Footer from '@/layouts/Footer.astro';
+import Hero from '@/components/Hero.astro';
+import { siteMetadata } from '@/data/siteMetadata';
+const { tagline, title } = siteMetadata.components.hero;
+
+const posts = (await getCollection('posts')).sort(function (first, second) {
+  return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
+});
+---
+
+<Layout>
+  <Container>
+    <Hero title={title} tagline={tagline} userLinks={siteMetadata.userLinks} />
+
+    <h2 class="mb-8 text-md font-bold font-heading dark:text-white">Recent Posts</h2>
+    <PostListByYear posts={posts} />
+
+    <Footer />
+  </Container>
+</Layout>

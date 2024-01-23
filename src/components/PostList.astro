@@ -1,0 +1,25 @@
+---
+import { type CollectionEntry } from 'astro:content';
+import { format, isValid } from 'date-fns';
+import PostItem from './PostItem.astro';
+const parseYear = (post: CollectionEntry<'posts'>) =>
+  post.data.publishedAt && isValid(new Date(post.data.publishedAt))
+    ? parseInt(format(post.data.publishedAt, 'yyyy'))
+    : 0;
+
+export type Props = {
+  posts: CollectionEntry<'posts'>[];
+  year: number;
+};
+
+const { posts, year } = Astro.props;
+---
+
+{
+  posts.map(
+    post =>
+      parseYear(post) === year && (
+        <PostItem post={post} />
+      )
+  )
+}

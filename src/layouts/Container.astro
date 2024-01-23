@@ -1,0 +1,12 @@
+---
+export type Props = {
+  wide?: boolean;
+  class?: string;
+};
+
+const { class: className, wide } = Astro.props;
+---
+
+<div class:list={['container mx-auto px-5', { 'max-w-3xl': !wide }, className ]}>
+  <slot />
+</div>

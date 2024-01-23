@@ -1,0 +1,57 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+
+import '@/styles/prism-template.css';
+import Container from '@/layouts/Container.astro';
+import DateFormatter from '@/components/DateFormatter.astro';
+import Footer from '@/layouts/Footer.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+type Props = {
+  post: CollectionEntry<'posts'>;
+};
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={post.data.title} description={post.data.description}>
+  <Container>
+    <article class="mb-32">
+      <h1
+        class="text-3xl lg:text-4xl leading-relaxed md:tracking-normal tracking-tighter lg:leading-normal mb-12 text-left font-thai text-gray-700 dark:text-gray-200"
+      >
+        {post.data.title}
+      </h1>
+
+      <div class="mx-auto -mt-10">
+        <div class="mb-12 text-md text-slate-500 dark:text-slate-300 flex items-center">
+          {/* bxs-calendar-event, https://reactsvgicons.com/search?q=calendar */}
+          <svg viewBox="0 0 24 24" fill="currentColor" height="1em" width="1em" class="mr-1 text-lg">
+            <path
+              d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm-1 15h-6v-6h6v6zm1-10H5V7h14v2z"
+            ></path>
+          </svg>
+
+          <DateFormatter date={post.data.publishedAt} format="MMM	d, yyyy" />
+        </div>
+      </div>
+
+      <!-- <p class="italic">{post.data.description}</p> -->
+
+      <div class="prose prose-slate dark:prose-dark">
+        <Content />
+      </div>
+    </article>
+    <Footer />
+  </Container>
+</Layout>

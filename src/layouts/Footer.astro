@@ -1,0 +1,20 @@
+---
+import { format } from 'date-fns';
+import Container from './Container.astro';
+import { siteMetadata } from '@/data/siteMetadata';
+import UserLinks from '@/components/UserLinks.astro';
+const { footer } = siteMetadata.components;
+---
+
+<footer class="text-center mt-40 mb-14 font-sans text-sm dark:text-gray-300">
+  <Container>
+    <div>
+      © {footer.sinceYear} - {format(new Date(), 'yyyy')}
+      {footer.copyright}
+    </div>
+    <div set:html={footer.tagline} />
+    <div class="mt-3">
+      <UserLinks userLinks={siteMetadata.userLinks} class="-mx-2" />
+    </div>
+  </Container>
+</footer>

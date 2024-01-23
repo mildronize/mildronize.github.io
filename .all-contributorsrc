@@ -1,0 +1,54 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "SterbenVD",
+      "name": "Vishal Vijay Devadiga",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90999906?v=4",
+      "profile": "https://github.com/SterbenVD",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "khushChopra",
+      "name": "Khush Chopra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43996455?v=4",
+      "profile": "https://github.com/khushChopra",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "javadshoja",
+      "name": "Javad Shoja",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57140027?v=4",
+      "profile": "http://jbrave.ir",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "mildronize",
+      "name": "mildronize",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3647850?v=4",
+      "profile": "https://thadaw.com",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "mt-astro-template",
+  "projectOwner": "mildronize"
+}

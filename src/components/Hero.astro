@@ -1,0 +1,31 @@
+---
+import type { UserLink } from '@/data/siteMetadata';
+import Button from './Button.astro';
+import UserLinks from './UserLinks.astro';
+
+export interface Props {
+  title: string;
+  tagline: string;
+  userLinks: UserLink[];
+}
+const { title, tagline, userLinks } = Astro.props;
+---
+
+<div class="md:pt-10 mb-24">
+  <h2
+    class="text-3xl md:text-4xl font-heading leading-10 lg:leading-normal tracking-tight text-gray-700 dark:text-gray-200"
+  >
+    {title}
+    <span class="text-slate-400">
+      {` `}
+      {tagline}
+    </span>
+  </h2>
+  <div class="mt-10">
+    <Button class="font-bold mr-3 text-gray-600 dark:text-gray-400" href="/about">👤&nbsp; About Me</Button>
+    <div class="mt-8">
+      <div class="mb-2 text-gray-700 dark:text-gray-400">Getting to know me:</div>
+      <UserLinks userLinks={userLinks} class="text-xl" />
+    </div>
+  </div>
+</div>
