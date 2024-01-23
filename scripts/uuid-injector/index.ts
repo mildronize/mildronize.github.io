@@ -1,1 +1,1 @@
-export * from './uuid';
+export * from './post-content';

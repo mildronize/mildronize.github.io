@@ -1,9 +1,10 @@
 ---
 title: 'Nammatham v2.x: A Type-Safe Evolution with Improved Dependency Injection'
-publishedAt: 2024-01-10
-description: "Lorem ipsum dolor sit amet consectetur et ultrices blandit neque ege"
-slug: "the-power-of-react-hooks-2"
+publishedAt: 2024-01-10T00:00:00.000Z
+description: Lorem ipsum dolor sit amet consectetur et ultrices blandit neque ege
+slug: the-power-of-react-hooks-2
 isPublish: true
+uuid: 5qqko3y
 ---
 
 

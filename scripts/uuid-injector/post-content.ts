@@ -13,10 +13,12 @@ export type AcceptedFrontmatter = Record<string, unknown> & {
 export class PostContent<Frontmatter extends AcceptedFrontmatter> {
   public frontmatter: Frontmatter;
   public content: string;
+  public uuid?: string;
 
   constructor(public relativePath: string, markdown: string) {
     const { data, content } = matter(markdown);
     this.frontmatter = data as Frontmatter;
+    this.uuid = this.frontmatter.uuid;
     this.content = content;
   }
 
@@ -27,6 +29,7 @@ export class PostContent<Frontmatter extends AcceptedFrontmatter> {
       this.frontmatter.uuid = uuid;
       await fs.writeFile(this.relativePath, matter.stringify(this.content, this.frontmatter), defaultUnicode);
     }
+    return uuid;
   }
 
   private generateUuid(length: number) {

@@ -1,9 +1,10 @@
 ---
-title: "วิธีตรวจสอบให้ Zod schemas ตรงกับ Type ที่ประกาศไว้อยู่แล้ว"
-publishedAt: 2023-05-24
-description: "Lorem ipsum dolor sit amet consectetur et ultrices blandit neque ege"
-slug: "2023-09-15-typecheck-schemas-on-existing-types"
+title: วิธีตรวจสอบให้ Zod schemas ตรงกับ Type ที่ประกาศไว้อยู่แล้ว
+publishedAt: 2023-05-24T00:00:00.000Z
+description: Lorem ipsum dolor sit amet consectetur et ultrices blandit neque ege
+slug: 2023-09-15-typecheck-schemas-on-existing-types
 isPublish: true
+uuid: 5qk1rbk
 ---
 
 วันนี้เราจะมาพูดถึงวิธีการในการตรวจสอบความเข้ากันได้ระหว่าง [Zod](https://github.com/colinhacks/zod) Schema และ TypeScript อย่างสะดวกและรวดเร็ว ไอเดียดีๆ นี้มาจาก [@colinhacks](https://github.com/colinhacks) ซึ่งเป็นคนสร้าง Zod โดยการใช้ Zod และอยากแบ่งปันให้ทุกคน
