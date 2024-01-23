@@ -10,13 +10,12 @@ export type AcceptedFrontmatter = Record<string, unknown> & {
   uuid?: string;
 };
 
-export default class PostContent<Frontmatter extends AcceptedFrontmatter> {
+export class PostContent<Frontmatter extends AcceptedFrontmatter> {
   public frontmatter: Frontmatter;
   public content: string;
 
   constructor(public relativePath: string, markdown: string) {
     const { data, content } = matter(markdown);
-    // TODO: Validate object when load from string
     this.frontmatter = data as Frontmatter;
     this.content = content;
   }

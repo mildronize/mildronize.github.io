@@ -1,6 +1,3 @@
-// const copy = require('recursive-copy');
-// const siteMetadata = require('../data/siteMetadata');
-
 import { siteMetadata } from '@/data/siteMetadata';
 import copy from 'recursive-copy';
 
